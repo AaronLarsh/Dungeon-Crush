@@ -18,6 +18,12 @@
   font-size: large;
 }
 
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

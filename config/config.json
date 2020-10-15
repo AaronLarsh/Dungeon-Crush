@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "MyLDA2020",
-    "database": "passport_demo",
+    "database": "dungeoncrush",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
