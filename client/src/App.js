@@ -4,7 +4,8 @@ import "./App.css";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Members from "./pages/Members";
-import Dungeoncrush from "./pages/Dungeoncrush";
+import DC from "./pages/dc";
+
 
 
 
@@ -18,7 +19,7 @@ function App() {
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/members" component={Members} />
-          <Route exact path="/dungeoncrush" component={Dungeoncrush} />
+          <Route exact path="/dungeoncrush" component={DC} />
       </div>
     </Router>
   );

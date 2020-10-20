@@ -18,6 +18,12 @@ function Members() {
             <div className="col-md-6 col-md-offset-3">
                 <h2>Welcome <span className="member-name"></span></h2>
             </div>
+            <div>            
+                <a href="/dungeoncrush">
+                start game
+                </a>
+                </div>
+
             </div>
         </div>
 
