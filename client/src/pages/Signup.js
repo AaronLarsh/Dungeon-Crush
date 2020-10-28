@@ -57,21 +57,13 @@ class Signup extends Component {
                         })
                         .then(function (res) {
                             console.log(res)
+                            window.location.replace("/members")
                         })
                         .catch(function (error) {
                             console.log(error);
                         });
                 })
                 .catch(err => console.log(err));
-            })
-            .catch(err => console.log(err));
-
-            axios.get("/members")
-            .then(data => {
-                console.log("of /members")
-                console.log(data)
-                window.location.replace(data.config.url)
-                
             })
             .catch(err => console.log(err));
         }
