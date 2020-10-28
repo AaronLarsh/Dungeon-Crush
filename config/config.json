@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "MyLDA2020",
-    "database": "dungeoncrush",
-    "host": "127.0.0.1",
+    "username": "wterty33os9qdvzk",
+    "password": "i2ricp18zajy00dn",
+    "database": "avz3hkewa8hvj3gj",
+    "host": "b4e9xxkxnpu2v96i.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
