@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 const axios = require('axios').default;
 
 
+
 class Signup extends Component {
     constructor(props) {
         super(props)
         this.state = {
         email: '', 
-        password: ''
+        password: '',
         }
         this.handleEmail = this.handleEmail.bind(this)
         this.handlePassword = this.handlePassword.bind(this)
@@ -38,18 +39,43 @@ class Signup extends Component {
             email: email,
             password: password
             })
-            .then(function (res) {
-                console.log(res)
-                window.location.replace("/members")
+            .then(function () {
+                let userID;
+                console.log("of res")
+                axios.get("/api/user_data")
+                .then(data => {
+                    console.log(data)
+                    userID = data.data.id;
+                    console.log(userID)
+
+                    let name = data.data.email;
+                    console.log(name)
+
+                    axios.post("/api/character", {
+                        highScore: 0,
+                        userID: userID,
+                        })
+                        .then(function (res) {
+                            console.log(res)
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+                })
+                .catch(err => console.log(err));
             })
-            .catch(function (handleLoginErr) {
-                console.log(handleLoginErr);
-            });
+            .catch(err => console.log(err));
+
+            axios.get("/members")
+            .then(data => {
+                console.log("of /members")
+                console.log(data)
+                window.location.replace(data.config.url)
+                
+            })
+            .catch(err => console.log(err));
         }
-    handleLoginErr(err) {
-        document.querySelectorAll("#alert .msg").text(err.responseJSON);
-        document.querySelectorAll("#alert").fadeIn(500);
-        }
+
     render (){
     return (
     <div>

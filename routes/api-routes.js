@@ -12,6 +12,7 @@ module.exports = function(app) {
       email: req.user.email,
       id: req.user.id
     });
+    console.log("sent from api login");
   });
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
@@ -25,6 +26,7 @@ module.exports = function(app) {
     })
       .then(() => {
         res.redirect(307, "/api/login");
+        console.log("sent from 29");
       })
       .catch(err => {
         res.status(401).json(err);
@@ -35,6 +37,8 @@ module.exports = function(app) {
   app.get("/logout", (req, res) => {
     req.logout();
     res.redirect("/");
+    console.log("sent from logout")
+
   });
 
   // Route for getting some data about our user to be used client side
