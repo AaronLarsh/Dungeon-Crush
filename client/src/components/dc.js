@@ -28,13 +28,15 @@ function DC() {
         };
         
         // All of the different tile colors in RGB
-        var tilecolors = [[255, 128, 128],
+        var tilecolors = [
+                            [255, 128, 128],
                             [128, 255, 128],
                             [128, 128, 255],
                             [255, 255, 128],
                             [255, 128, 255],
                             [128, 255, 255],
-                            [255, 255, 255]];
+                            [255, 255, 255]
+                        ];
         
         // Clusters and moves that were found
         var clusters = [];  // { column, row, length, horizontal }
