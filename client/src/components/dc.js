@@ -303,7 +303,7 @@ function DC() {
             // Draw title
             context.fillStyle = "#ffffff";
             context.font = "24px Verdana";
-            context.fillText("Match3 Example - Rembound.com", 10, 30);
+            context.fillText("Dungeon Crush", 10, 30);
             
             // Display fps
             context.fillStyle = "#ffffff";
